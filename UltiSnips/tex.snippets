@@ -146,12 +146,18 @@ snippet - "list element"
 endsnippet
 
 snippet align "align" b
-\begin{align}
-$1
-\end{align}$0
+\begin{aligned}
+	${VISUAL}$1
+\end{aligned}$0
 endsnippet
 
 snippet bm "bold math" i
 \pmb{$1}$0
+endsnippet
+
+snippet "(_[0-9a-zA-Z]+)\s" "subscript" rA
+`!p
+snip.rv = "_{" + match.group(1).split('_')[1] + "}"
+`
 endsnippet
 
