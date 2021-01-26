@@ -16,20 +16,20 @@ $4
 endsnippet
 
 snippet # "section" b
-\section{$1}$0
+\section*{$1}$0
 endsnippet
 
 snippet ## "subsection" b
-\subsection{$1}$0
+\subsection*{$1}$0
 endsnippet
 
 snippet ### "subsubsection" b
-\subsubsection{$1}$0
+\subsubsection*{$1}$0
 endsnippet
 
 snippet center "centering block" b
 \begin{center}
-$1
+${VISUAL}$1
 \end{center}$0
 endsnippet
 
@@ -58,11 +58,11 @@ $1
 endsnippet
 
 snippet inline "inline math" i
-$$1$
+$${VISUAL}$1$
 endsnippet
 
 snippet mathline "equation"
-$$$1$$
+$$${VISUAL}$1$$
 endsnippet
 
 snippet fint "definite integral" 
