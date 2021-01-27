@@ -65,8 +65,8 @@ snippet mathline "equation"
 $$${VISUAL}$1$$
 endsnippet
 
-snippet fint "definite integral" 
-\int_{$1}^{$2}
+snippet fint "definite integral" i
+\int_{$1}^{$2}$0
 endsnippet
 
 snippet "(.+)," "new element in row" r
@@ -155,7 +155,7 @@ snippet bm "bold math" i
 \pmb{$1}$0
 endsnippet
 
-snippet "(_[0-9a-zA-Z]+)\s" "subscript" rA
+snippet "(_[0-9a-zA-Z]+)\s" "quick subscript" rA
 `!p
 snip.rv = "_{" + match.group(1).split('_')[1] + "}"
 `
