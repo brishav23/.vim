@@ -1,16 +1,10 @@
+extends math
+
 snippet init "initialize" b
 ---
 geometry: margin=1in
 header-includes: \usepackage{graphicx}
 ---$0
-endsnippet
-
-snippet mathline "math inline" b
-$$${VISUAL}$1$$$0
-endsnippet
-
-snippet inline "inline math"
-$${VISUAL}$1$$0
 endsnippet
 
 snippet it "italics" i
@@ -19,14 +13,6 @@ endsnippet
 
 snippet bf "bold" i
 **${VISUAL}$1**$0
-endsnippet
-
-snippet frac "fraction" i
-\frac{$1}{$2}$0
-endsnippet
-
-snippet sub "subscript both sides" i
-{$1}_{$2}$0
 endsnippet
 
 snippet includegraphics "include graphics" b
@@ -43,55 +29,5 @@ snippet mcode "multiline code" i
 \`\`\`$1
 $2
 \`\`\`$0
-endsnippet
-
-snippet fint "definite integral" i
-\int_{$1}^{$2}$0
-endsnippet
-
-snippet "(.+)," "new element in row" r
-`!p
-snip.rv = match.group(1).split(',')[0] + " & "
-`
-endsnippet
-
-snippet "(.+);" "new row" r
-`!p
-snip.rv = match.group(1).split(';')[0] + " \\\\"
-`
-endsnippet
-
-snippet bmat "brackets matrix" i
-\begin{bmatrix}$1\end{bmatrix}
-endsnippet
-
-snippet Bmat "braces matrix" i
-\begin{Bmatrix}$1\end{Bmatrix}
-endsnippet
-
-snippet pmat "parenthesis matrix" i
-\begin{pmatrix}$1\end{pmatrix}
-endsnippet
-
-snippet vec "vector" i
-\vec{${VISUAL}$1}$0
-endsnippet
-
-snippet \text "text in math" i
-\text{${VISUAL}$1}$0
-endsnippet
-
-snippet bm "bold math" i
-\pmb{$1}$0
-endsnippet
-
-snippet "(_[0-9a-zA-Z]+)\s" "quick subscript" rA
-`!p
-snip.rv = "_{" + match.group(1).split('_')[1] + "}"
-`
-endsnippet
-
-snippet sqrt "square root" i
-\sqrt{$1}$0
 endsnippet
 
