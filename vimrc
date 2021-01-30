@@ -37,8 +37,8 @@ colo darkblue
 set autoindent
 set shiftwidth=2
 set backspace=indent,eol,start
-autocmd BufNewFile,BufRead *.tex nnoremap <buffer> // I%<space><esc>
-autocmd BufNewFile,BufRead *.tex nnoremap <buffer> ?? 0xx<esc>
+autocmd BufNewFile,BufRead *.tex nnoremap <buffer> // :s/^/%<CR>
+autocmd BufNewFile,BufRead *.tex nnoremap <buffer> ?? :s/^%//<CR>
 autocmd BufNewFile,BufRead *.tex nnoremap <buffer> <C-b> :!pdflatex % && open -ga Preview "%:r.pdf"<CR><CR>
 autocmd BufNewFile,BufRead *.md nnoremap <buffer> <C-b> :!pandoc -s -o "%:r.pdf"  % && open -ga Preview "%:r.pdf"<CR><CR>
 autocmd BufNewFile,BufRead *.md :syn match markdownIgnore "\$.*\$"
