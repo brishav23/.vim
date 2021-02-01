@@ -12,6 +12,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'SirVer/ultisnips'
 
+Plugin 'preservim/nerdtree'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -37,6 +39,7 @@ colo darkblue
 set autoindent
 set shiftwidth=2
 set backspace=indent,eol,start
+nnoremap <C-d> :NERDTreeToggle<CR>
 autocmd BufNewFile,BufRead *.tex nnoremap <buffer> // :s/^/%<CR>
 autocmd BufNewFile,BufRead *.tex nnoremap <buffer> ?? :s/^%//<CR>
 autocmd BufNewFile,BufRead *.tex nnoremap <buffer> <C-b> :!pdflatex % && open -ga Preview "%:r.pdf"<CR><CR>
