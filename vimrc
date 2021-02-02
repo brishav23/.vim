@@ -47,4 +47,5 @@ autocmd BufNewFile,BufRead *.md nnoremap <buffer> <C-b> :!pandoc -s -o "%:r.pdf"
 autocmd BufNewFile,BufRead *.md :syn match markdownIgnore "\$.*\$"
 autocmd BufNewFile,BufRead *.c :vnoremap <buffer> // :s/^/\/\/<CR>
 autocmd BufNewFile,BufRead *.c :vnoremap <buffer> ?? :s/^\/\//<CR>
+autocmd BufNewFile,BufRead *.c :set tabstop=4 shiftwidth=4
 
