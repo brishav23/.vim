@@ -16,13 +16,7 @@ snip.rv = match.group(1).split(',')[0] + " & "
 `
 endsnippet
 
-snippet "(.+);;" "new row" r
-`!p
-snip.rv = match.group(1).split(';')[0] + " \\\\"
-`
-endsnippet
-
-snippet "([a-zA-Z0-9_{}]+,\s*)+([a-zA-Z0-9_{}]+;)" "full row" r
+snippet "(.+);" "full row" r
 `!p
 split = re.split(r',\s*', match.group(0))
 for i in range(len(split)-1):
