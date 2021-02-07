@@ -96,3 +96,19 @@ snip.rv = "{" + match.group(1) + "}_{" + match.group(2) + "}" + match.group(3)
 `
 endsnippet
 
+snippet \set "set" i
+\\{${VISUAL}$1\\}$0
+endsnippet
+
+snippet | "mid or pipe" i
+\mid
+endsnippet
+
+snippet nullset "null set" i
+\varnothing
+endsnippet
+
+snippet abs "absolute value" i
+|${VISUAL}$1|$0
+endsnippet
+
