@@ -36,6 +36,7 @@ syntax on
 set number
 set tabstop=2
 colo darkblue
+hi Normal ctermbg=none
 set autoindent
 set shiftwidth=2
 set backspace=indent,eol,start
