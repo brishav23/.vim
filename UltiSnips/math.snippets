@@ -58,6 +58,13 @@ snippet frac "fraction" i
 \frac{$1}{$2}$0
 endsnippet
 
+snippet "([0-9a-zA-Z]+)\/([0-9a-zA-Z]+)" "autofraction" ir
+`!p
+snip.rv = "\\frac{" + match.group(1) + "}{" + match.group(2) + "}"
+`
+endsnippet
+
+
 snippet bar "bar" i
 \bar{${VISUAL}$1}$0
 endsnippet
@@ -110,5 +117,9 @@ endsnippet
 
 snippet abs "absolute value" i
 |${VISUAL}$1|$0
+endsnippet
+
+snippet pow "power" i
+{$1}{$2}$0
 endsnippet
 
