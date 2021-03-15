@@ -41,6 +41,7 @@ set autoindent
 set shiftwidth=2
 set backspace=indent,eol,start
 nnoremap <C-d> :NERDTreeToggle<CR>
+nnoremap <C-c> :!cat % \| pbcopy<CR><CR>
 autocmd BufNewFile,BufRead *.tex nnoremap <buffer> // :s/^/%<CR>
 autocmd BufNewFile,BufRead *.tex nnoremap <buffer> ?? :s/^%//<CR>
 autocmd BufNewFile,BufRead *.tex nnoremap <buffer> <C-b> :!pdflatex % && open -ga Preview "%:r.pdf"<CR><CR>
