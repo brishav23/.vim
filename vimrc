@@ -42,12 +42,13 @@ set shiftwidth=2
 set backspace=indent,eol,start
 nnoremap <C-d> :NERDTreeToggle<CR>
 nnoremap <C-c> :!cat % \| pbcopy<CR><CR>
-autocmd BufNewFile,BufRead *.tex nnoremap <buffer> // :s/^/%<CR>
-autocmd BufNewFile,BufRead *.tex nnoremap <buffer> ?? :s/^%//<CR>
+autocmd BufNewFile,BufRead *.tex vnoremap <buffer> // :s/^/%/<CR>
+autocmd BufNewFile,BufRead *.tex vnoremap <buffer> ?? :s/^%//<CR>
 autocmd BufNewFile,BufRead *.tex nnoremap <buffer> <C-b> :!pdflatex % && open -ga Preview "%:r.pdf"<CR><CR>
 autocmd BufNewFile,BufRead *.md nnoremap <buffer> <C-b> :!pandoc -s -o "%:r.pdf"  % && open -ga Preview "%:r.pdf"<CR><CR>
 autocmd BufNewFile,BufRead *.md :syn match markdownIgnore "\$.*\$"
 autocmd BufNewFile,BufRead *.c :vnoremap <buffer> // :s/^/\/\/<CR>
 autocmd BufNewFile,BufRead *.c :vnoremap <buffer> ?? :s/^\/\//<CR>
 autocmd BufNewFile,BufRead *.c :set tabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead *.asy nnoremap <buffer> <C-b> :!asy "%:r"  % && open -ga Preview "%:r.pdf"<CR><CR>
 
