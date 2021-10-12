@@ -46,6 +46,7 @@ set shiftwidth=2
 set backspace=indent,eol,start
 nnoremap <C-d> :NERDTreeToggle<CR>
 nnoremap <C-c> :!cat % \| pbcopy<CR><CR>
+autocmd BufNewFile,BufRead *.vimcp set filetype=math
 autocmd BufNewFile,BufRead *.tex vnoremap <buffer> // :s/^/%/<CR>
 autocmd BufNewFile,BufRead *.tex vnoremap <buffer> // :s/^/%/<CR>
 autocmd BufNewFile,BufRead *.asy vnoremap <buffer> ?? :s/^%//<CR>
