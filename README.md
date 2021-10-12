@@ -11,8 +11,9 @@ In order to use it, use [vundle](https://github.com/VundleVim/Vundle.vim) and in
 Since there is a mapping to copy the contents of the file to the clipboard on macos using ```pbcopy```, this will only work on linux with an alias
 
 ```
-alias "pbcopy=xclip"
+alias 'pbcopy'='xclip -sel c'
+alias 'pbpaste'='xclip -sel c -o'
 ```
 
-in the ```.bashrc```
+in the ```.zshrc```
 
