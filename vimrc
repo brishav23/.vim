@@ -44,6 +44,7 @@ hi Normal ctermbg=none
 set autoindent
 set shiftwidth=2
 set backspace=indent,eol,start
+set incsearch
 nnoremap <C-d> :NERDTreeToggle<CR>
 nnoremap <C-c> :!cat % \| pbcopy<CR><CR>
 autocmd BufNewFile,BufRead *.vimcp set filetype=math
