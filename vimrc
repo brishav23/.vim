@@ -36,13 +36,14 @@ let g:UltiSnipsEditSplit="vertical"
 "let g:UltiSnipsSnippetDir=['~/.vim/UltiSnips']"
 
 filetype on
+filetype plugin indent off
 syntax on
 set number
-set tabstop=2
 colorscheme dracula
 hi Normal ctermbg=none
 set autoindent
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set backspace=indent,eol,start
 set incsearch
 nnoremap <C-d> :NERDTreeToggle<CR>
@@ -58,6 +59,6 @@ autocmd BufNewFile,BufRead *.md nnoremap <buffer> <C-b> :!pandoc -s -o "%:r.pdf"
 autocmd BufNewFile,BufRead *.md :syn match markdownIgnore "\$.*\$"
 autocmd BufNewFile,BufRead *.c :vnoremap <buffer> // :s/^/\/\/<CR>
 autocmd BufNewFile,BufRead *.c :vnoremap <buffer> ?? :s/^\/\//<CR>
-autocmd BufNewFile,BufRead *.c :set tabstop=4 shiftwidth=4
+"autocmd BufNewFile,BufRead *.c :set tabstop=4 shiftwidth=4
 autocmd BufNewFile,BufRead *.asy nnoremap <buffer> <C-b> :!asy "%:r"  % && open -ga Preview "%:r.pdf"<CR><CR>
 set tags=./tags,tags;$HOME
