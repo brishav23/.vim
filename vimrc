@@ -18,6 +18,8 @@ Plugin 'hura/vim-asymptote'
 
 Plugin 'dracula/vim', {'name':'dracula'}
 
+Plugin 'craigemery/vim-autotag'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
