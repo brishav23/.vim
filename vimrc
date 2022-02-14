@@ -45,6 +45,7 @@ colorscheme dracula
 hi Normal ctermbg=none
 set autoindent
 set tabstop=4
+set noexpandtab
 set shiftwidth=4
 set backspace=indent,eol,start
 set incsearch
