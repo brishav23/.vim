@@ -44,11 +44,15 @@ set number
 colorscheme dracula
 hi Normal ctermbg=none
 set autoindent
+set hidden
 set tabstop=4
 set noexpandtab
 set shiftwidth=4
 set backspace=indent,eol,start
 set incsearch
+nnoremap gn :bn<CR>
+nnoremap gp :bp<CR>
+nnoremap gb <C-^>
 nnoremap <C-d> :NERDTreeToggle<CR>
 autocmd BufNewFile,BufRead *.vimcp set filetype=math
 autocmd BufNewFile,BufRead *.tex vnoremap <buffer> // :s/^/%/<CR>
