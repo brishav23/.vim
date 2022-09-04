@@ -68,3 +68,4 @@ autocmd BufNewFile,BufRead *.c :vnoremap <buffer> ?? :s/^\/\//<CR>
 "autocmd BufNewFile,BufRead *.c :set tabstop=4 shiftwidth=4
 autocmd BufNewFile,BufRead *.asy nnoremap <buffer> <C-b> :!asy "%:r"  % && open -ga Preview "%:r.pdf"<CR><CR>
 set tags=./tags,tags;$HOME
+set autoreload
