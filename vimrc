@@ -43,6 +43,7 @@ syntax on
 set number
 colorscheme dracula
 hi Normal ctermbg=none
+hi Normal ctermfg=none
 set autoindent
 set hidden
 set tabstop=4
