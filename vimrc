@@ -12,15 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'SirVer/ultisnips'
 
-Plugin 'preservim/nerdtree'
-
-Plugin 'hura/vim-asymptote'
-
 Plugin 'dracula/vim', {'name':'dracula'}
-
-Plugin 'craigemery/vim-autotag'
-
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -56,24 +48,12 @@ set incsearch
 nnoremap gn :bn<CR>
 nnoremap gp :bp<CR>
 nnoremap gb <C-^>
-nnoremap <C-d> :NERDTreeToggle<CR>
 autocmd BufNewFile,BufRead *.vimcp set filetype=math
-autocmd BufNewFile,BufRead *.tex vnoremap <buffer> // :s/^/%/<CR>
-autocmd BufNewFile,BufRead *.tex vnoremap <buffer> // :s/^/%/<CR>
 autocmd BufNewFile,BufRead *.tex set syntax=tex
-autocmd BufNewFile,BufRead *.asy vnoremap <buffer> ?? :s/^%//<CR>
-autocmd BufNewFile,BufRead *.asy vnoremap <buffer> ?? :s/^%//<CR>
 autocmd BufNewFile,BufRead *.tex nnoremap <buffer> <C-b> :!pdflatex % && open -ga Preview "%:r.pdf"<CR><CR>
 autocmd BufNewFile,BufRead *.md nnoremap <buffer> <C-b> :!pandoc -s -o "%:r.pdf"  % && open -ga Preview "%:r.pdf"<CR><CR>
 autocmd BufNewFile,BufRead *.md :syn match markdownIgnore "\$.*\$"
-autocmd BufNewFile,BufRead *.c :vnoremap <buffer> // :s/^/\/\/<CR>
-autocmd BufNewFile,BufRead *.c :vnoremap <buffer> ?? :s/^\/\//<CR>
 "autocmd BufNewFile,BufRead *.c :set tabstop=4 shiftwidth=4
-autocmd BufNewFile,BufRead *.asy nnoremap <buffer> <C-b> :!asy "%:r"  % && open -ga Preview "%:r.pdf"<CR><CR>
 set tags=./tags,tags;$HOME
 set autoread
 set rnu
-
-" coc mappings
-nnoremap <C-]> <Plug>(coc-definition)
-nnoremap gi <Plug>(coc-implementation)
