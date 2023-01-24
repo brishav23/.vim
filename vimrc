@@ -20,6 +20,8 @@ Plugin 'dracula/vim', {'name':'dracula'}
 
 Plugin 'craigemery/vim-autotag'
 
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -71,3 +73,7 @@ autocmd BufNewFile,BufRead *.asy nnoremap <buffer> <C-b> :!asy "%:r"  % && open 
 set tags=./tags,tags;$HOME
 set autoread
 set rnu
+
+" coc mappings
+nnoremap <C-]> <Plug>(coc-definition)
+nnoremap gi <Plug>(coc-implementation)
