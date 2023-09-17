@@ -9,6 +9,7 @@ snippet init "Make the beginning" b
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{multirow}
+\usepackage[indLines=true]{algpseudocodex}
 
 \title{${1:title}}
 \date{${2:date}}
@@ -86,3 +87,14 @@ snippet boxed "boxed" i
 \\boxed{${VISUAL}$1}$0
 endsnippet
 
+snippet lr() "left-right parentheses" i
+\left(${VISUAL}$1\right)$0
+endsnippet
+
+snippet lr[] "left-right brackets" i
+\left[${VISUAL}$1\right]$0
+endsnippet
+
+snippet lr{} "left-right brackets" i
+\left\{${VISUAL}$1\right\}$0
+endsnippet

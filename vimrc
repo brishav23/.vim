@@ -40,14 +40,11 @@ hi Normal ctermbg=none
 hi Normal ctermfg=none
 set autoindent
 set hidden
-set tabstop=4
-set noexpandtab
-set shiftwidth=4
+set tabstop=2
+set expandtab
+set shiftwidth=2
 set backspace=indent,eol,start
 set incsearch
-nnoremap gn :bn<CR>
-nnoremap gp :bp<CR>
-nnoremap gb <C-^>
 autocmd BufNewFile,BufRead *.vimcp set filetype=math
 autocmd BufNewFile,BufRead *.tex set syntax=tex
 autocmd BufNewFile,BufRead *.tex nnoremap <buffer> <C-b> :!pdflatex % && open -ga Preview "%:r.pdf"<CR><CR>
